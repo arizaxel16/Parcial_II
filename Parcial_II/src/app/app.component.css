@@ -1,0 +1,38 @@
+#page_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+#data_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    height: 100%;
+    width: 35vw;
+    min-width: 350px;
+}
+
+#appointment_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.column {
+    flex: 1;
+    padding: 20px;
+    border: 1px solid #ddd;
+}
+
+/* Media query for stacking columns on smaller screens */
+@media (max-width: 768px) {
+    #data_container {
+        flex-direction: column;
+    }
+}
