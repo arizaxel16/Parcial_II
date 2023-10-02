@@ -1,38 +1,52 @@
 <div class="user-data-container">
-    <div class="data-input_field-container">
-        <span><h2>Name</h2><h2 class="asterisk">*</h2></span>
-        <div class="textInputWrapper">
-            <input class="textInput" type="text" name="name" id="name_input" maxlength="50">
+    <form id="user-data-form">
+        <div class="data-input_field-container">
+            <span>
+                <h2>Name</h2>
+                <h2 class="asterisk">*</h2>
+            </span>
+            <div class="textInputWrapper">
+                <input class="textInput" type="text" name="name" id="name_input" maxlength="50" required>
+            </div>
         </div>
-    </div>
-    <div class="data-input_field-container">
-        <h2>Second Name</h2>
-        <div class="textInputWrapper">
-            <input class="textInput" type="text" name="secondName" id="secondName_input" maxlength="50">
+        <div class="data-input_field-container">
+            <h2>Second Name</h2>
+            <div class="textInputWrapper">
+                <input class="textInput" type="text" name="secondName" id="secondName_input" maxlength="50">
+            </div>
         </div>
-    </div>
-    <div class="data-input_field-container">
-        <span><h2>Surname</h2><h2 class="asterisk">*</h2></span>
-        <div class="textInputWrapper">
-            <input class="textInput" type="text" name="surname" id="surname_input" maxlength="50">
+        <div class="data-input_field-container">
+            <span>
+                <h2>Surname</h2>
+                <h2 class="asterisk">*</h2>
+            </span>
+            <div class="textInputWrapper">
+                <input class="textInput" type="text" name="surname" id="surname_input" maxlength="50" required>
+            </div>
         </div>
-    </div>
-    <div class="data-input_field-container">
-        <span><h2>ID</h2><h2 class="asterisk">*</h2></span>
-        <div class="textInputWrapper">
-            <input class="textInput" type="number" name="id" id="id_input" placeholder="xxxxxxxxxx" maxlength="10" minlength="10">
+        <div class="data-input_field-container">
+            <span>
+                <h2>ID</h2>
+                <h2 class="asterisk">*</h2>
+            </span>
+            <div class="textInputWrapper">
+                <input class="textInput" type="number" name="id" id="id_input" placeholder="xxxxxxxxxx" maxlength="10" minlength="10" required>
+            </div>
         </div>
-    </div>
-    <div class="data-input_field-container">
-        <span><h2>Tel</h2><h2 class="asterisk">*</h2></span>
-        <div class="textInputWrapper">
-            <input class="textInput" type="tel" name="tel" id="tel_input" placeholder="123-4567890" maxlength="10" minlength="10">
+        <div class="data-input_field-container">
+            <span>
+                <h2>Tel</h2>
+                <h2 class="asterisk">*</h2>
+            </span>
+            <div class="textInputWrapper">
+                <input class="textInput" type="tel" name="tel" id="tel_input" placeholder="123-4567890" maxlength="10" minlength="10" required>
+            </div>
         </div>
-    </div>
-    <div class="data-input_field-container">
-        <h2>E-Mail</h2>
-        <div class="textInputWrapper">
-            <input class="textInput" type="email" name="email" id="email_input" placeholder="example@email.com">
+        <div class="data-input_field-container">
+            <h2>E-Mail</h2>
+            <div class="textInputWrapper">
+                <input class="textInput" type="email" name="email" id="email_input" placeholder="example@email.com">
+            </div>
         </div>
-    </div>
+    </form>
 </div>
