@@ -1,0 +1,21 @@
+.calendar-input_field-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 20px 0px;
+    width: 270px;
+}
+
+.calendar-input_field-container input {
+    background-color: #d9d9d9;
+    width: 93%;
+    height: 26px;
+    border: none;
+    padding: 0px 10px;
+    margin-top: 5px;
+}
+
+h2 {
+    font-size: 1.4rem;
+    font-family: "Inter", sans-serif;
+}

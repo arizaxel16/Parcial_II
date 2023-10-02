@@ -1,1 +1,10 @@
-<p>calendar works!</p>
+<div class="calendar-content-container">
+    <div class="calendar-input_field-container">
+        <h2>Date of appointment</h2>
+        <input type="date" name="date" id="date_input" [min]="minDate" [max]="maxDate" (input)="onDateChange($event)">
+    </div>
+    <div class="calendar-box">
+        <h3> {{ numDate }} </h3>
+        <h4> {{ monthDate }} </h4>
+    </div>
+</div>

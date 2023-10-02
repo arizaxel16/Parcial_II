@@ -24,15 +24,11 @@
 
 .column {
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: flex-start;
     flex-direction: column;
     width: 40vh;
     height: 100%;
-}
-
-.column-content {
-    width: 100%;
 }
 
 @media (max-width: 800px) {
