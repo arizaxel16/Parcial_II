@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-calendar',
@@ -6,6 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./calendar.component.css']
 })
 export class CalendarComponent implements OnInit {
+  calendarForm: FormGroup;
+
+  constructor(private fb: FormBuilder) {
+    this.calendarForm = this.fb.group({
+      date: ['', Validators.required],
+    });
+  }
 
   minDate: string | undefined;
   maxDate: string | undefined;
@@ -47,5 +55,9 @@ export class CalendarComponent implements OnInit {
     
     this.numDate = dateObject.getDate()+1;
     this.monthDate = monthNames[monthNumber];
+  }
+
+  isFormValid(): boolean {
+    return this.calendarForm.valid;
   }
 }

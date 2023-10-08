@@ -50,3 +50,13 @@ h4 {
     padding-bottom: 5px;
     margin: 40px 0px;
 }
+
+.error-message {
+    margin: 10px 0px;
+    padding: 3px 5px;
+    border-radius: 5px;
+    background-color: #d1494996;
+    color: #c11c1c;
+    font-size: 14px;
+    font-family: "Inter", sans-serif;
+  }
