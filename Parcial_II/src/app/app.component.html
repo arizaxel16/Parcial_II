@@ -3,12 +3,6 @@
     <app-header />
   </div>
   <div id="data_container">
-    <app-user-data class="column"/>
-    <div class="column">
-      <app-appointment-type-selector />
-      <app-calendar />
-      <button type="submit" (click)="onSubmit()">Confirm</button>
-    </div>
+    <router-outlet></router-outlet>
   </div>
 </div>
-<router-outlet></router-outlet>

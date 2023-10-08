@@ -9,6 +9,7 @@ import { UserDataComponent } from './user-data/user-data.component';
 import { CalendarComponent } from './calendar/calendar.component';
 import { AppointmentTypeSelectorComponent } from './appointment-type-selector/appointment-type-selector.component';
 import { TicketComponent } from './ticket/ticket.component';
+import { FormComponent } from './form/form.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { TicketComponent } from './ticket/ticket.component';
     UserDataComponent,
     CalendarComponent,
     AppointmentTypeSelectorComponent,
-    TicketComponent
+    TicketComponent,
+    FormComponent
   ],
   imports: [
     BrowserModule,
