@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { ReactiveFormsModule } from '@angular/forms'; // Import ReactiveFormsModule here
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -18,6 +19,7 @@ import { AppointmentTypeSelectorComponent } from './appointment-type-selector/ap
   ],
   imports: [
     BrowserModule,
+    ReactiveFormsModule, // Add ReactiveFormsModule here
     AppRoutingModule
   ],
   providers: [],

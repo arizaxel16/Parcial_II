@@ -1,51 +1,75 @@
 <div class="user-data-container">
-    <form id="user-data-form">
+    <form id="user-data-form" *ngIf="userForm" [formGroup]="userForm">
+        <!-- Name Input -->
         <div class="data-input_field-container">
             <span>
                 <h2>Name</h2>
                 <h2 class="asterisk">*</h2>
             </span>
             <div class="textInputWrapper">
-                <input class="textInput" type="text" name="name" id="name_input" maxlength="50" required>
+                <input class="textInput" type="text" formControlName="name" id="name_input">
+            </div>
+            <div *ngIf="userForm.get('name')!.invalid && userForm.get('name')!.touched" class="error-message">
+                Name is required and must contain only letters (max 50 char).
             </div>
         </div>
+        <!-- Second Name Input -->
         <div class="data-input_field-container">
             <h2>Second Name</h2>
             <div class="textInputWrapper">
-                <input class="textInput" type="text" name="secondName" id="secondName_input" maxlength="50">
+                <input class="textInput" type="text" formControlName="secondName" id="secondName_input">
+            </div>
+            <div *ngIf="userForm.get('secondName')!.invalid && userForm.get('secondName')!.touched" class="error-message">
+                Second name must contain only letters (max 50 char).
             </div>
         </div>
+        <!-- Surname Input -->
         <div class="data-input_field-container">
             <span>
                 <h2>Surname</h2>
                 <h2 class="asterisk">*</h2>
             </span>
             <div class="textInputWrapper">
-                <input class="textInput" type="text" name="surname" id="surname_input" maxlength="50" required>
+                <input class="textInput" type="text" formControlName="surname" id="surname_input">
+            </div>
+            <div *ngIf="userForm.get('surname')!.invalid && userForm.get('surname')!.touched" class="error-message">
+                Surname is required and must contain only letters (max 50 char).
             </div>
         </div>
+        <!-- ID Input -->
         <div class="data-input_field-container">
             <span>
                 <h2>ID</h2>
                 <h2 class="asterisk">*</h2>
             </span>
             <div class="textInputWrapper">
-                <input class="textInput" type="number" name="id" id="id_input" placeholder="xxxxxxxxxx" maxlength="10" minlength="10" required>
+                <input class="textInput" type="text" formControlName="id" id="id_input" [placeholder]="idInput_placeholder">
+            </div>
+            <div *ngIf="userForm.get('id')!.invalid && userForm.get('id')!.touched" class="error-message">
+                ID must contain only numbers (10 digits).
             </div>
         </div>
+        <!-- Tel Input -->
         <div class="data-input_field-container">
             <span>
                 <h2>Tel</h2>
                 <h2 class="asterisk">*</h2>
             </span>
             <div class="textInputWrapper">
-                <input class="textInput" type="tel" name="tel" id="tel_input" placeholder="123-4567890" maxlength="10" minlength="10" required>
+                <input class="textInput" type="text" formControlName="tel" id="tel_input" [placeholder]="telInput_placeholder">
+            </div>
+            <div *ngIf="userForm.get('tel')!.invalid && userForm.get('tel')!.touched" class="error-message">
+                Tel must contain only numbers (10 digits).
             </div>
         </div>
+        <!-- Email Input -->
         <div class="data-input_field-container">
             <h2>E-Mail</h2>
             <div class="textInputWrapper">
-                <input class="textInput" type="email" name="email" id="email_input" placeholder="example@email.com">
+                <input class="textInput" type="email" formControlName="email" id="email_input" [placeholder]="emailInput_placeholder">
+            </div>
+            <div *ngIf="userForm.get('email')!.invalid && userForm.get('email')!.touched" class="error-message">
+                Invalid email address.
             </div>
         </div>
     </form>
