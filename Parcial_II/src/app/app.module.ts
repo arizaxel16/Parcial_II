@@ -8,6 +8,7 @@ import { HeaderComponent } from './header/header.component';
 import { UserDataComponent } from './user-data/user-data.component';
 import { CalendarComponent } from './calendar/calendar.component';
 import { AppointmentTypeSelectorComponent } from './appointment-type-selector/appointment-type-selector.component';
+import { TicketComponent } from './ticket/ticket.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { AppointmentTypeSelectorComponent } from './appointment-type-selector/ap
     HeaderComponent,
     UserDataComponent,
     CalendarComponent,
-    AppointmentTypeSelectorComponent
+    AppointmentTypeSelectorComponent,
+    TicketComponent
   ],
   imports: [
     BrowserModule,

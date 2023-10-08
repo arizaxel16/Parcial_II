@@ -18,10 +18,8 @@ export class AppComponent {
 
   onSubmit() {
     if (this.userDataComponent && this.userDataComponent.isFormValid() && this.appointmentTypeSelectorComponent && this.appointmentTypeSelectorComponent.isFormValid() && this.calendarComponent && this.calendarComponent.isFormValid()) {
-      // Perform form submission logic here
       console.log('Form submitted successfully:', this.userDataComponent.userForm.value, this.appointmentTypeSelectorComponent.appointmentSelectForm.value, this.calendarComponent.calendarForm.value);
     } else {
-      // Handle form validation errors
       console.log('Form is invalid. Please check the fields.');
     }
   }
