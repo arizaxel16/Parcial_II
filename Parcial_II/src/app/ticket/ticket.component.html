@@ -1,1 +1,43 @@
-<p>ticket works!</p>
+<div id="ticket_container">
+  <div id="ticket">
+    <h2>Appointment registered</h2>
+    <h5>Ticket #{{ code }}</h5>
+    <div class="data_field">
+      <h3>Name</h3>
+      <h4>{{ name }}</h4>
+    </div>
+    <div class="data_field">
+      <h3>Second Name</h3>
+      <h4>{{ secondName }}</h4>
+    </div>
+    <div class="data_field">
+      <h3>Surname</h3>
+      <h4>{{ surname }}</h4>
+    </div>
+    <div class="data_field">
+      <h3>ID</h3>
+      <h4>{{ id }}</h4>
+    </div>
+    <div class="data_field">
+      <h3>Telephone</h3>
+      <h4>{{ tel }}</h4>
+    </div>
+    <div class="data_field">
+      <h3>Email</h3>
+      <h4>{{ email }}</h4>
+    </div>
+    <div class="data_field" *ngIf="appointmentType != 'other'">
+      <h3>Appointment</h3>
+      <h4>{{ appointmentType }}</h4>
+    </div>
+    <div class="data_field" *ngIf="appointmentType === 'other' && otherType">
+      <h3>Appointment</h3>
+      <h4>{{ otherType }}</h4>
+    </div>
+    <div class="data_field">
+      <h3>Date</h3>
+      <h4>{{ date }}</h4>
+    </div>
+  </div>
+  <button (click)="navHome()">Schedule new appointment</button>
+</div>

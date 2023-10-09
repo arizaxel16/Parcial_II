@@ -4,6 +4,7 @@ import { UserDataComponent } from '../user-data/user-data.component';
 import { AppointmentTypeSelectorComponent } from '../appointment-type-selector/appointment-type-selector.component';
 import { CalendarComponent } from '../calendar/calendar.component';
 import { Router } from '@angular/router';
+import { Ticket } from '../ticket/ticket.model';
 
 @Component({
   selector: 'app-form',
@@ -19,12 +20,22 @@ export class FormComponent {
 
   onSubmit() {
     if (this.userDataComponent && this.userDataComponent.isFormValid() && this.appointmentTypeSelectorComponent && this.appointmentTypeSelectorComponent.isFormValid() && this.calendarComponent && this.calendarComponent.isFormValid()) {
-      console.log('Form submitted successfully:', this.userDataComponent.userForm.value, this.appointmentTypeSelectorComponent.appointmentSelectForm.value, this.calendarComponent.calendarForm.value);
     
-      // Navigate to the '/ticket' route
-      this.router.navigate(['/ticket']);
+      const ticket: Ticket = {
+        name: this.userDataComponent.userForm.value.name,
+        secondName: this.userDataComponent.userForm.value.secondName,
+        surname: this.userDataComponent.userForm.value.surname,
+        id: this.userDataComponent.userForm.value.id,
+        tel: this.userDataComponent.userForm.value.tel,
+        email: this.userDataComponent.userForm.value.email,
+        appointmentType: this.appointmentTypeSelectorComponent.appointmentSelectForm.value.appointmentType,
+        otherType: this.appointmentTypeSelectorComponent.appointmentSelectForm.value.otherType,
+        date: this.calendarComponent.calendarForm.value.date,
+      };
+
+      this.router.navigate(['/ticket'], { state: { ticket: ticket } });
     } else {
-      console.log('Form is invalid. Please check the fields.');
+      alert("Some form fields are invalid, please check and re-send the form");
     }
   }
 }
