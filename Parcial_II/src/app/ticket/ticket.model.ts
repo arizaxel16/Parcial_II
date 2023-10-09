@@ -1,4 +1,5 @@
 export class Ticket {
+    //objeto modelo ticket
     name: string | undefined;
     secondName?: string;
     surname: string | undefined;

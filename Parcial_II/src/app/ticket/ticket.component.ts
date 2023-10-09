@@ -8,6 +8,8 @@ import { Ticket } from './ticket.model';
   styleUrls: ['./ticket.component.css'],
 })
 export class TicketComponent {
+
+  //variables visuales y objeto ticket
   myTicket: Ticket | undefined;
 
   name: string | undefined;
@@ -20,12 +22,14 @@ export class TicketComponent {
   otherType?: string;
   date: string | undefined;
 
+  //constructor recibe objeto ticket
   constructor(private router: Router) {
     const navigation = this.router.getCurrentNavigation();
     if (navigation && navigation.extras.state) {
       this.myTicket = navigation.extras.state['ticket'];
     }
 
+    // asignacion de attributos a variables locales
     if (this.myTicket) {
       this.name = this.myTicket.name;
       this.secondName = this.myTicket.secondName;
@@ -36,7 +40,7 @@ export class TicketComponent {
       this.appointmentType = this.myTicket.appointmentType;
       this.otherType = this.myTicket.otherType;
       this.date = this.myTicket.date
-    } else {
+    } else { // caso de excepcion
       this.name = "";
       this.secondName = "";
       this.surname = "";
@@ -49,6 +53,7 @@ export class TicketComponent {
     }
   }
 
+  // enruta a pagina principal
   navHome(){
     this.router.navigate(['/']);
   }

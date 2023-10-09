@@ -4,6 +4,7 @@ import { FormComponent } from './form/form.component';
 import { TicketComponent } from './ticket/ticket.component';
 
 const routes: Routes = [
+  // enrutamientos de router-outlet
   { path: '', component: FormComponent },
   { path: 'ticket', component: TicketComponent }
 ];

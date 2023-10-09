@@ -8,12 +8,14 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class UserDataComponent {
 
+  // constantes visual
   readonly idInput_placeholder: String = "xxxxxxxxxx";
   readonly telInput_placeholder: String = "123-4567890";
   readonly emailInput_placeholder: String = "example@email.com";
 
   userForm: FormGroup;
 
+  // constructor formulario con validaciones individuales
   constructor(private fb: FormBuilder) {
     this.userForm = this.fb.group({
       name: ['', [Validators.required, Validators.maxLength(50), Validators.pattern(/^[a-zA-Z]+$/)]],
@@ -25,6 +27,7 @@ export class UserDataComponent {
     });
   }
 
+  // funcion general de comprobacion de formulario
   isFormValid(): boolean {
     return this.userForm.valid;
   }
